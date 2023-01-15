@@ -1,9 +1,4 @@
 :root{
-    --main-color: darkcyan;
-    --black: #555;
-    --light: #777;
-    --bg: #fceae9;
-    --border: .1rem solid rgba(0,0,0,.1);
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 *{
@@ -47,11 +42,61 @@ html{
     font-size: 2vw;
     font-weight: bold;
 }
-.about .container-fluid img{
-    position: relative;
+.col .card img{
+    width: 15vw;
+    height: 15vw;
 }
-.about .description {
-    position: absolute;
-    background: rgba(0,0,0,.4);
-    transform: translate(70%,-300%);
+.col .card{
+    align-items: center;
+    background-color: rgba(0, 200, 255, 0.1);
+    border-radius: 10%;
+    border: 1.5px solid blue;
+}
+.card-title{
+    font-size: 2.5vw;
+}
+.collapse ul li a:hover{
+    border-bottom: 1px solid blue;
+}
+.to-top{
+    background-color: rgba(0, 76, 255, 0.404);
+    position: fixed;
+    bottom: 1.5vw;
+    right: 2.5vw;
+    display: flex;
+    border-radius: 50%;
+    width: 3vw; height: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    font-size: 1.5vw;
+    color: #1f1f1f;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.to-top.active{
+    bottom: 1.5vw;
+    pointer-events: auto;
+    opacity: 1;
+}
+.to-top.active:hover {
+    background-color: blue;
+    color: white;
+}
+#contact .col iframe{
+    padding: 0; margin: 0;
+    width: 100%;
+    height: 30vw;
+}
+#contact .container-fluid {
+    margin: 0;
+    background-color: rgba(0, 200, 255, 0.1);
+}
+#contact .row {
+    border: 1px solid rgba(0, 76, 255, 0.404);
+}
+#contact .container-fluid h1{
+    padding: 2vw;
+    text-transform: uppercase;
 }
