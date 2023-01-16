@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 :root{
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
@@ -7,8 +8,8 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s ease-out;
+    font-family: 'Poppins', sans-serif;
 }
 
 html{
@@ -55,8 +56,17 @@ html{
 .card-title{
     font-size: 2.5vw;
 }
-.collapse ul li a:hover{
-    border-bottom: 1px solid blue;
+.collapse ul li::after{
+    content: "";
+    width: 0;
+    display: block;
+    height: 2px;
+    margin: auto;
+    background-color: blue;
+    transition: all .5s;
+}
+.collapse ul li:hover::after{
+    width: 100%;
 }
 .to-top{
     background-color: rgba(0, 76, 255, 0.404);
@@ -65,7 +75,7 @@ html{
     right: 2.5vw;
     display: flex;
     border-radius: 50%;
-    width: 3vw; height: 3vw;
+    width: 40px; height: 40px;
     align-items: center;
     justify-content: center;
     text-decoration: none; 
@@ -84,10 +94,11 @@ html{
     background-color: blue;
     color: white;
 }
-#contact .col iframe{
-    padding: 0; margin: 0;
-    width: 100%;
-    height: 30vw;
+#contact .col {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 #contact .container-fluid {
     margin: 0;
@@ -95,8 +106,20 @@ html{
 }
 #contact .row {
     border: 1px solid rgba(0, 76, 255, 0.404);
+    background-color: rgba(0,0,0,.1);
 }
 #contact .container-fluid h1{
     padding: 2vw;
     text-transform: uppercase;
+    font-size: 3.5vw;
+    text-align: center;
+}
+#contact .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+    height: 27rem;
+}
+#contact .submit-button{
+    margin-bottom: 1rem;
 }
